@@ -114,8 +114,12 @@ const methods = [
   'setContent',
   'setProxy',
   'stop',
+  'switchToChildFrame',
+  'switchToFocusedFrame',
   'switchToFrame',
   'switchToMainFrame',
+  'switchToParentFrame',
+  'setFrameContent'
   'goBack',
   'uploadFile',
 ];
