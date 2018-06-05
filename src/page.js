@@ -119,7 +119,7 @@ const methods = [
   'switchToFrame',
   'switchToMainFrame',
   'switchToParentFrame',
-  'setFrameContent'
+  'setFrameContent',
   'goBack',
   'uploadFile',
 ];
