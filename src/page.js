@@ -76,9 +76,8 @@ export default class Page {
      * Gets or sets a property
      */
   property(...args: any[]): Promise<*> {
-    if (args.length === 2 && typeof args[1] === 'function') {
-      this.$phantom.logger.warn('page.property(key, function(){}) will be deprecated in the next major release.');
-      this.$phantom.logger.warn('Please use page.on(key, function(){}) instead. See README for more details.');
+    if (args.length > 1 && typeof args[1] === 'function') {
+      throw new Error('page.property(key, function(){}) has been removed. Use page.on(key, function(){}) instead.');
     }
     return this.$phantom.execute(this.target, 'property', args);
   }
